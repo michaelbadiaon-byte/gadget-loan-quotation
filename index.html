@@ -154,6 +154,26 @@
 
   .lbl{ color:var(--ink); }
 
+  .fill-btn{
+    display:block;
+    margin-top:16px;
+    text-align:center;
+    font-family:'Helvetica Neue', Arial, sans-serif;
+    font-size:14.5px;
+    font-weight:600;
+    text-decoration:none;
+    color:#fff;
+    background:var(--gold);
+    border-radius:4px;
+    padding:14px 0;
+    opacity:0.4;
+    pointer-events:none;
+  }
+  .fill-btn.ready{
+    opacity:1;
+    pointer-events:auto;
+  }
+
   footer{
     margin-top:26px;
     text-align:center;
@@ -202,7 +222,7 @@
       <span class="amt" id="outInterest">—</span>
     </div>
     <div class="row">
-      <span class="lbl">Unit Amount + Interest (Total)</span>
+      <span class="lbl">Unit + Interest (Total)</span>
       <span class="amt" id="outTotal">—</span>
     </div>
     <div class="row">
@@ -225,6 +245,8 @@
       </div>
     </div>
   </div>
+
+  <a href="#" id="fillFormBtn" class="fill-btn" target="_blank" rel="noopener">I-proceed ang Loan Application →</a>
 
   <footer>Downpayment: ₱1,000 kada ₱6,000 ng halaga ng unit</footer>
 
@@ -262,11 +284,16 @@
     return 0.35; // 7–12
   }
 
+  const TALLY_FORM_URL = 'https://tally.so/r/2Ep4kM';
+  const fillBtn = document.getElementById('fillFormBtn');
+  const unitNameEl = document.getElementById('unitName');
+
   function compute() {
     const unitAmount = parseFloat(unitAmountEl.value);
     if (!unitAmount || unitAmount <= 0) {
       ['outRate','outInterest','outTotal','outDp','outBalance','outMonthly','outCutoff']
         .forEach(id => document.getElementById(id).textContent = '—');
+      fillBtn.classList.remove('ready');
       return;
     }
 
@@ -285,6 +312,21 @@
     document.getElementById('outBalance').textContent = peso(balance);
     document.getElementById('outMonthly').textContent = peso(monthly);
     document.getElementById('outCutoff').textContent = peso(cutoff);
+
+    const params = new URLSearchParams({
+      unit_name: unitNameEl.value || '',
+      unit_amount: unitAmount.toFixed(2),
+      months: selectedMonths,
+      rate: (rate * 100) + '%',
+      interest_amount: interest.toFixed(2),
+      total_amount: total.toFixed(2),
+      downpayment: dp.toFixed(2),
+      remaining_balance: balance.toFixed(2),
+      monthly_payment: monthly.toFixed(2),
+      per_cutoff: cutoff.toFixed(2)
+    });
+    fillBtn.href = TALLY_FORM_URL + '?' + params.toString();
+    fillBtn.classList.add('ready');
   }
 
   compute();
