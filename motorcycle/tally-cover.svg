@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="686" viewBox="0 0 1600 686" role="img" aria-labelledby="title desc">
+  <title id="title">JDDH Flexipay Motorcycle Loan Application and Agreement</title>
+  <desc id="desc">Dark navy and hot pink neon motorcycle loan cover for JDDH Flexipay.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#071426"/><stop offset="0.55" stop-color="#0b1f3a"/><stop offset="1" stop-color="#050914"/></linearGradient>
+    <linearGradient id="pink" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#ff3e95"/><stop offset="1" stop-color="#e91e63"/></linearGradient>
+    <radialGradient id="glow"><stop stop-color="#ff3e95" stop-opacity=".62"/><stop offset="1" stop-color="#ff3e95" stop-opacity="0"/></radialGradient>
+    <filter id="neon"><feGaussianBlur stdDeviation="9" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <filter id="shadow"><feDropShadow dx="0" dy="18" stdDeviation="20" flood-color="#000" flood-opacity=".48"/></filter>
+  </defs>
+  <rect width="1600" height="686" fill="url(#bg)"/>
+  <ellipse cx="1240" cy="160" rx="390" ry="300" fill="url(#glow)" opacity=".55"/>
+  <path d="M890 98 C1120 -20 1470 38 1550 280" fill="none" stroke="#ff3e95" stroke-width="5" opacity=".85" filter="url(#neon)"/>
+  <path d="M860 128 C1120 18 1440 72 1530 300" fill="none" stroke="#ff3e95" stroke-width="2" opacity=".35"/>
+
+  <!-- subtle skyline -->
+  <g opacity=".27" fill="#173d63">
+    <rect x="760" y="235" width="52" height="310"/><rect x="818" y="180" width="38" height="365"/><rect x="864" y="258" width="70" height="287"/>
+    <rect x="940" y="145" width="44" height="400"/><rect x="992" y="220" width="62" height="325"/><rect x="1062" y="166" width="34" height="379"/>
+    <rect x="1104" y="270" width="55" height="275"/><rect x="1170" y="205" width="45" height="340"/><rect x="1225" y="122" width="54" height="423"/>
+    <rect x="1288" y="244" width="66" height="301"/><rect x="1364" y="170" width="42" height="375"/><rect x="1415" y="226" width="74" height="319"/>
+  </g>
+  <g opacity=".42" fill="#ff3e95">
+    <rect x="780" y="270" width="4" height="90"/><rect x="838" y="225" width="4" height="130"/><rect x="956" y="190" width="4" height="100"/>
+    <rect x="1248" y="165" width="4" height="150"/><rect x="1384" y="210" width="4" height="110"/>
+  </g>
+
+  <!-- left copy -->
+  <g font-family="Inter,Segoe UI,Arial,sans-serif">
+    <text x="92" y="124" fill="#ffffff" font-size="76" font-weight="900" letter-spacing="2">JDDH</text>
+    <text x="92" y="206" fill="#ff3e95" font-size="74" font-weight="900">Flexipay</text>
+    <path d="M94 224 C230 244 350 238 470 211" fill="none" stroke="#ff3e95" stroke-width="5" stroke-linecap="round" filter="url(#neon)"/>
+    <text x="92" y="300" fill="#ffffff" font-size="56" font-weight="850">Motorcycle Loan</text>
+    <text x="92" y="354" fill="#dce7f5" font-size="34" font-weight="650">Application &amp; Agreement</text>
+    <rect x="92" y="390" width="170" height="5" rx="3" fill="url(#pink)"/>
+    <text x="92" y="440" fill="#aebed2" font-size="24" font-weight="500">Clear terms. Organized application. Trusted service.</text>
+  </g>
+
+  <!-- feature icons -->
+  <g transform="translate(92 500)" font-family="Inter,Segoe UI,Arial,sans-serif">
+    <g><circle cx="28" cy="28" r="28" fill="none" stroke="#ff3e95" stroke-width="2"/><path d="M17 28l8 8 16-19" fill="none" stroke="#ff3e95" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><text x="72" y="25" fill="#fff" font-size="19" font-weight="700">Secure</text><text x="72" y="48" fill="#b9c7d8" font-size="18">Application</text></g>
+    <g transform="translate(245 0)"><circle cx="28" cy="28" r="28" fill="none" stroke="#ff3e95" stroke-width="2"/><rect x="17" y="14" width="22" height="28" rx="3" fill="none" stroke="#ff3e95" stroke-width="3"/><path d="M21 22h14M21 29h14M21 36h10" stroke="#ff3e95" stroke-width="2"/><text x="72" y="25" fill="#fff" font-size="19" font-weight="700">Clear</text><text x="72" y="48" fill="#b9c7d8" font-size="18">Terms</text></g>
+    <g transform="translate(465 0)"><circle cx="28" cy="28" r="28" fill="none" stroke="#ff3e95" stroke-width="2"/><circle cx="24" cy="23" r="8" fill="none" stroke="#ff3e95" stroke-width="3"/><circle cx="37" cy="27" r="6" fill="none" stroke="#ff3e95" stroke-width="3"/><path d="M10 45c4-11 12-16 22-16 9 0 16 4 21 13" fill="none" stroke="#ff3e95" stroke-width="3"/><text x="72" y="25" fill="#fff" font-size="19" font-weight="700">Trusted</text><text x="72" y="48" fill="#b9c7d8" font-size="18">Service</text></g>
+  </g>
+
+  <!-- document panel -->
+  <g transform="translate(1035 104) rotate(4 205 250)" filter="url(#shadow)">
+    <rect x="0" y="0" width="410" height="500" rx="28" fill="#101927" stroke="#ff3e95" stroke-width="3"/>
+    <rect x="17" y="17" width="376" height="466" rx="20" fill="#172436" stroke="#263c58" stroke-width="2"/>
+    <text x="46" y="78" fill="#fff" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="32" font-weight="900">MOTORCYCLE LOAN</text>
+    <text x="46" y="116" fill="#cbd7e5" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="22" font-weight="700">APPLICATION &amp; AGREEMENT</text>
+    <g fill="#8292a6" opacity=".75"><rect x="46" y="160" width="270" height="12" rx="6"/><rect x="46" y="190" width="310" height="12" rx="6"/><rect x="46" y="220" width="238" height="12" rx="6"/><rect x="46" y="250" width="294" height="12" rx="6"/></g>
+    <rect x="284" y="285" width="62" height="62" rx="12" fill="#251629" stroke="#ff3e95" stroke-width="3"/>
+    <path d="M300 316l12 12 25-30" fill="none" stroke="#ff3e95" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" filter="url(#neon)"/>
+    <path d="M58 406 C96 382 117 438 154 404 C181 380 198 425 231 399" fill="none" stroke="#dbe5f2" stroke-width="3" opacity=".8"/>
+    <path d="M46 445h312" stroke="#546479" stroke-width="2"/>
+  </g>
+
+  <!-- motorcycle silhouette -->
+  <g transform="translate(760 360)" filter="url(#shadow)">
+    <ellipse cx="266" cy="225" rx="290" ry="58" fill="#ff3e95" opacity=".10" filter="url(#neon)"/>
+    <circle cx="92" cy="196" r="76" fill="#070a10" stroke="#ff3e95" stroke-width="6"/><circle cx="92" cy="196" r="48" fill="none" stroke="#3f4a5d" stroke-width="5"/>
+    <circle cx="438" cy="196" r="76" fill="#070a10" stroke="#ff3e95" stroke-width="6"/><circle cx="438" cy="196" r="48" fill="none" stroke="#3f4a5d" stroke-width="5"/>
+    <path d="M105 185 L196 126 L304 132 L373 170 L438 196 M196 126 L151 196 L284 196 L304 132 M284 196 L373 170" fill="none" stroke="#cad6e5" stroke-width="13" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M176 120 L245 84 L325 96 L306 133 L196 126 Z" fill="#18283a" stroke="#ff3e95" stroke-width="4"/>
+    <path d="M286 88 L342 58 L365 67 L332 100" fill="none" stroke="#b9c9db" stroke-width="8" stroke-linecap="round"/>
+    <path d="M343 58 L393 43" stroke="#b9c9db" stroke-width="7" stroke-linecap="round"/>
+    <path d="M367 68 L407 77" stroke="#b9c9db" stroke-width="6" stroke-linecap="round"/>
+    <rect x="214" y="152" width="88" height="48" rx="16" fill="#0f1825" stroke="#ff3e95" stroke-width="3"/>
+    <path d="M123 162 L72 119" stroke="#ff3e95" stroke-width="7" stroke-linecap="round" filter="url(#neon)"/>
+    <path d="M373 170 L399 107" stroke="#ff3e95" stroke-width="7" stroke-linecap="round" filter="url(#neon)"/>
+  </g>
+
+  <!-- peso coin -->
+  <g transform="translate(1410 492)" filter="url(#shadow)"><circle r="78" fill="#101927" stroke="#ff3e95" stroke-width="5"/><circle r="60" fill="#18263a" stroke="#65405a" stroke-width="2"/><text x="0" y="25" text-anchor="middle" fill="#fff" font-family="Arial,sans-serif" font-size="76" font-weight="900">₱</text></g>
+  <rect x="0" y="640" width="1600" height="46" fill="#070b13" opacity=".85"/>
+  <rect x="0" y="640" width="610" height="4" fill="#ff3e95" filter="url(#neon)"/>
+</svg>
