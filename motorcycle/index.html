@@ -1,1 +1,229 @@
-<!DOCTYPE html><html lang="tl"><head><meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="theme-color" content="#0b1f3a" /><title>JDDH Flexipay Motorcycle Loan Calculator</title><meta name="description" content="Compare JDDH Flexipay motorcycle installment computations with casa financing for 24- and 36-month terms." /><style>:root{--navy:#0b1f3a;--navy-2:#15365f;--pink:#e91e63;--pink-dark:#bd1550;--paper:#f5f7fb;--panel:#ffffff;--ink:#172033;--muted:#6f7b8d;--line:#dfe5ee;--soft:#eef3f8;--green:#18794e;--green-soft:#e9f7ef;--yellow:#fff6bf;--yellow-line:#f0d94a;--danger:#b42318;}*{box-sizing:border-box;}html{scroll-behavior:smooth;}body{margin:0;color:var(--ink);background:linear-gradient(180deg,#edf2f8 0,#f8fafc 34%,var(--paper) 100%);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;-webkit-font-smoothing:antialiased;}button,input{font:inherit;}.wrap{max-width:980px;margin:0 auto;padding:26px 18px 56px;}.brandbar{height:6px;border-radius:999px;background:linear-gradient(90deg,var(--navy) 0 68%,var(--pink) 68% 100%);margin-bottom:24px;}header{margin-bottom:20px;}.kicker{margin:0 0 7px;color:var(--pink-dark);font-size:12px;font-weight:900;letter-spacing:.1em;text-transform:uppercase;}h1{margin:0;color:var(--navy);font-size:32px;line-height:1.12;letter-spacing:-.03em;}.sub{margin:10px 0 0;color:var(--muted);font-size:14px;line-height:1.55;max-width:760px;}.card{background:var(--panel);border:1px solid var(--line);border-radius:16px;box-shadow:0 10px 30px rgba(11,31,58,.06);padding:20px;}.input-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;}.field{min-width:0;}.field.full{grid-column:1/-1;}label,.field-label{display:block;margin-bottom:7px;color:var(--navy-2);font-size:13px;font-weight:800;}input{width:100%;padding:12px 13px;border:1px solid var(--line);border-radius:10px;background:#fff;color:var(--ink);font-size:16px;}input:focus{outline:none;border-color:var(--pink);box-shadow:0 0 0 3px rgba(233,30,99,.10);}.hint{margin:6px 0 0;color:var(--muted);font-size:11.5px;line-height:1.4;}.term-tabs{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:18px;}.term-btn{border:1px solid var(--line);border-radius:12px;background:#fff;color:var(--navy);padding:13px 14px;font-weight:900;cursor:pointer;transition:.15s ease;}.term-btn.active{background:var(--navy);border-color:var(--navy);color:#fff;box-shadow:0 8px 18px rgba(11,31,58,.14);}.formula-note{margin-top:14px;padding:12px 14px;border-radius:11px;background:var(--soft);color:#526071;font-size:12px;line-height:1.5;}.formula-note strong{color:var(--navy);}.comparison{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:18px;}.quote-card{background:#fff;border:1px solid var(--line);border-radius:15px;overflow:hidden;}.quote-head{padding:15px 16px;background:var(--navy);color:#fff;}.quote-card.casa .quote-head{background:#27384f;}.quote-head .eyebrow{font-size:11px;letter-spacing:.08em;text-transform:uppercase;opacity:.72;font-weight:800;}.quote-head h2{margin:4px 0 0;font-size:20px;line-height:1.2;}.quote-body{padding:7px 16px 15px;}.row{display:flex;justify-content:space-between;gap:16px;align-items:baseline;padding:9px 0;font-size:13.5px;}.row + .row{border-top:1px solid #edf0f4;}.row .lbl{color:#566273;}.row .amt{text-align:right;font-weight:850;color:var(--ink);white-space:nowrap;}.row.strong .lbl,.row.strong .amt{font-weight:900;color:var(--navy);}.row.total{margin:5px -8px 0;padding:11px 8px;border-radius:9px;background:var(--yellow);border:1px solid var(--yellow-line);}.row.total .lbl,.row.total .amt{color:#4d4300;font-weight:900;}.hero-pay{margin-top:10px;padding:14px 15px;border-radius:12px;background:var(--navy);color:#fff;}.hero-pay .mini{font-size:11px;opacity:.72;font-weight:800;letter-spacing:.06em;text-transform:uppercase;}.hero-pay .value{margin-top:4px;font-size:28px;font-weight:950;letter-spacing:-.03em;}.hero-pay .cutoff{margin-top:7px;font-size:13px;color:rgba(255,255,255,.82);}.savings{margin-top:16px;padding:16px 18px;border-radius:15px;background:var(--green-soft);border:1px solid #b7e2c8;display:grid;grid-template-columns:1.2fr 1fr;gap:18px;align-items:center;}.savings .label{color:var(--green);font-size:12px;font-weight:900;letter-spacing:.08em;text-transform:uppercase;}.savings .big{margin-top:4px;color:var(--green);font-size:31px;font-weight:950;letter-spacing:-.03em;}.savings .detail{color:#466454;font-size:13px;line-height:1.55;}.negative{color:var(--danger)!important;}.actions{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:16px;}.action-btn{border:none;border-radius:10px;padding:13px 12px;font-weight:900;cursor:pointer;}.copy-btn{background:var(--pink);color:#fff;}.reset-btn{background:var(--soft);color:var(--navy);}.copy-btn:active,.reset-btn:active{transform:translateY(1px);}.action-btn:disabled{opacity:.45;cursor:not-allowed;transform:none;}.disclaimer{margin:14px 0 0;color:var(--muted);font-size:11.5px;line-height:1.5;}footer{margin-top:22px;text-align:center;color:var(--muted);font-size:11.5px;line-height:1.5;}@media(max-width:760px){.input-grid{grid-template-columns:1fr 1fr;}.comparison{grid-template-columns:1fr;}.savings{grid-template-columns:1fr;gap:8px;}}@media(max-width:480px){.wrap{padding:20px 14px 44px;}h1{font-size:27px;}.card{padding:16px;}.input-grid{grid-template-columns:1fr;}.field.full{grid-column:auto;}.actions{grid-template-columns:1fr;}.row{font-size:13px;}.hero-pay .value{font-size:26px;}.savings .big{font-size:28px;}}</style></head><body><main class="wrap"><div class="brandbar"></div><header><p class="kicker">JDDH Flexipay Motorcycle Loan</p><h1>Motorcycle Loan Calculator</h1><p class="sub">Compare JDDH Flexipay with Casa Financing. Select a 24- or 36-month term to view the complete payment breakdown and estimated savings.</p></header><section class="card" aria-label="Motorcycle loan comparison calculator"><div class="input-grid"><div class="field full"><label for="model">Motorcycle Model</label><input id="model" type="text" value="" placeholder="" autocomplete="off" /></div><div class="field"><label for="srp">Suggested Retail Price (SRP)</label><input id="srp" type="number" min="1" step="1" value="" placeholder="" inputmode="decimal" /></div><div class="field"><label for="dp">Down Payment (₱)</label><input id="dp" type="number" min="0" step="1" value="" placeholder="" inputmode="decimal" /></div><div class="field"><label for="lto">LTO / Registration Fee (₱)</label><input id="lto" type="number" min="0" step="1" value="" placeholder="" inputmode="decimal" /></div><div class="field"><label for="casa24">Casa Monthly Payment — 24 Months (₱)</label><input id="casa24" type="number" min="0" step="1" value="" placeholder="" inputmode="decimal" /><p class="hint">Enter the Casa monthly quotation for 24 months.</p></div><div class="field"><label for="casa36">Casa Monthly Payment — 36 Months (₱)</label><input id="casa36" type="number" min="0" step="1" value="" placeholder="" inputmode="decimal" /><p class="hint">Enter the Casa monthly quotation for 36 months.</p></div></div><div class="term-tabs" aria-label="Payment term"><button class="term-btn active" type="button" data-term="24">24 Months</button><button class="term-btn" type="button" data-term="36">36 Months</button></div><div class="formula-note" id="formulaNote"></div><div class="comparison"><article class="quote-card jddh"><div class="quote-head"><div class="eyebrow">JDDH OFFER</div><h2>JDDH Flexipay</h2></div><div class="quote-body"><div class="row"><span class="lbl">SRP</span><span class="amt" id="jSrp">—</span></div><div class="row"><span class="lbl" id="feeLabel">Credit Card Term Fee</span><span class="amt" id="jFee">—</span></div><div class="row"><span class="lbl">LTO / Registration Fee</span><span class="amt" id="jLto">—</span></div><div class="row strong"><span class="lbl">Base Amount</span><span class="amt" id="jBase">—</span></div><div class="row"><span class="lbl" id="interestLabel">JDDH Interest</span><span class="amt" id="jInterest">—</span></div><div class="row total"><span class="lbl">JDDH Total Amount</span><span class="amt" id="jTotal">—</span></div><div class="row"><span class="lbl">Less: Down Payment</span><span class="amt" id="jDp">—</span></div><div class="row strong"><span class="lbl">Remaining Balance</span><span class="amt" id="jBalance">—</span></div><div class="hero-pay"><div class="mini">Monthly Payment</div><div class="value" id="jMonthly">—</div><div class="cutoff">Per Cut-Off: <strong id="jCutoff">—</strong></div></div></div></article><article class="quote-card casa"><div class="quote-head"><div class="eyebrow">CASA QUOTATION</div><h2>Motorcycle Casa</h2></div><div class="quote-body"><div class="row"><span class="lbl">SRP</span><span class="amt" id="cSrp">—</span></div><div class="row"><span class="lbl">Monthly Payment × Term</span><span class="amt" id="cInstallment">—</span></div><div class="row"><span class="lbl">Down Payment</span><span class="amt" id="cDp">—</span></div><div class="row total"><span class="lbl">Casa Total Payment</span><span class="amt" id="cTotal">—</span></div><div class="hero-pay"><div class="mini">Casa Monthly Payment</div><div class="value" id="cMonthly">—</div><div class="cutoff"><span id="termText">24 Months</span> Financing Quotation</div></div></div></article></div><section class="savings" aria-live="polite"><div><div class="label">ESTIMATED SAVINGS WITH JDDH FLEXIPAY</div><div class="big" id="savings">—</div></div><div class="detail" id="savingsDetail">Enter the motorcycle and financing details to generate the computation.</div></section><div class="actions"><button type="button" id="copyBtn" class="action-btn copy-btn" disabled>Copy Quotation</button><button type="button" id="resetBtn" class="action-btn reset-btn">Clear Form</button></div><p class="disclaimer">This calculator is intended for quotation purposes only. Savings are calculated as Casa Total Payment minus JDDH Remaining Balance, following the approved JDDH Flexipay computation. Final amounts are subject to verification.</p></section><footer>JDDH Travel and Business Services · Flexipay Motorcycle Loan</footer></main><script>const refs = {model: document.getElementById('model'),srp: document.getElementById('srp'),dp: document.getElementById('dp'),lto: document.getElementById('lto'),casa24: document.getElementById('casa24'),casa36: document.getElementById('casa36'),formulaNote: document.getElementById('formulaNote'),feeLabel: document.getElementById('feeLabel'),interestLabel: document.getElementById('interestLabel'),jSrp: document.getElementById('jSrp'),jFee: document.getElementById('jFee'),jLto: document.getElementById('jLto'),jBase: document.getElementById('jBase'),jInterest: document.getElementById('jInterest'),jTotal: document.getElementById('jTotal'),jDp: document.getElementById('jDp'),jBalance: document.getElementById('jBalance'),jMonthly: document.getElementById('jMonthly'),jCutoff: document.getElementById('jCutoff'),cSrp: document.getElementById('cSrp'),cInstallment: document.getElementById('cInstallment'),cDp: document.getElementById('cDp'),cTotal: document.getElementById('cTotal'),cMonthly: document.getElementById('cMonthly'),termText: document.getElementById('termText'),savings: document.getElementById('savings'),savingsDetail: document.getElementById('savingsDetail'),copyBtn: document.getElementById('copyBtn'),resetBtn: document.getElementById('resetBtn')};const termButtons = [...document.querySelectorAll('.term-btn')];let selectedTerm = 24;const termRules = {24: { feeRate: 0.06, interestRate: 0.35 },36: { feeRate: 0.10, interestRate: 0.50 }};function raw(el){return el.value.trim();}function n(el){const text = raw(el);if (text === '') return null;const value = Number(text);return Number.isFinite(value) && value >= 0 ? value : null;}function peso(value, decimals = 0){return new Intl.NumberFormat('en-PH', {style: 'currency',currency: 'PHP',minimumFractionDigits: decimals,maximumFractionDigits: decimals}).format(Number.isFinite(value) ? value : 0);}function pct(value){return `${Math.round(value * 100)}%`;}function setBlankState(){refs.formulaNote.innerHTML = `<strong>${selectedTerm}-Month Plan:</strong> ${pct(termRules[selectedTerm].feeRate)} Credit Card Term Fee + LTO / Registration Fee, followed by ${pct(termRules[selectedTerm].interestRate)} JDDH Interest. Savings are based on Casa Total Payment minus JDDH Remaining Balance.`;refs.feeLabel.textContent = `Credit Card Term Fee (${pct(termRules[selectedTerm].feeRate)})`;refs.interestLabel.textContent = `JDDH Interest (${pct(termRules[selectedTerm].interestRate)})`;[refs.jSrp, refs.jFee, refs.jLto, refs.jBase, refs.jInterest, refs.jTotal, refs.jDp, refs.jBalance, refs.jMonthly, refs.jCutoff,refs.cSrp, refs.cInstallment, refs.cDp, refs.cTotal, refs.cMonthly].forEach(el => el.textContent = '—');refs.termText.textContent = `${selectedTerm} Months`;refs.savings.textContent = '—';refs.savings.classList.remove('negative');refs.savingsDetail.textContent = 'Enter the motorcycle and financing details to generate the computation.';refs.copyBtn.disabled = true;}function calculate(){const modelText = raw(refs.model);const srpValue = n(refs.srp);const dpValue = n(refs.dp);const ltoValue = n(refs.lto);const casa24Value = n(refs.casa24);const casa36Value = n(refs.casa36);const hasInput = modelText !== '' || [srpValue, dpValue, ltoValue, casa24Value, casa36Value].some(v => v !== null);if (!hasInput) {setBlankState();return null;}const srp = srpValue ?? 0;const dp = Math.min(dpValue ?? 0, Number.MAX_SAFE_INTEGER);const lto = ltoValue ?? 0;const rule = termRules[selectedTerm];const casaMonthly = selectedTerm === 24 ? (casa24Value ?? 0) : (casa36Value ?? 0);const cardFee = srp * rule.feeRate;const baseAmount = srp + cardFee + lto;const interestAmount = baseAmount * rule.interestRate;const jddhTotal = baseAmount + interestAmount;const balance = Math.max(0, jddhTotal - dp);const jddhMonthlyExact = selectedTerm ? balance / selectedTerm : 0;const cutoffExact = selectedTerm ? balance / (selectedTerm * 2) : 0;const casaInstallments = casaMonthly * selectedTerm;const casaTotal = casaInstallments + dp;const savings = casaTotal - balance;const monthlySavings = casaMonthly - jddhMonthlyExact;refs.formulaNote.innerHTML = `<strong>${selectedTerm}-Month Plan:</strong> ${pct(rule.feeRate)} Credit Card Term Fee + LTO / Registration Fee, followed by ${pct(rule.interestRate)} JDDH Interest. The Down Payment is deducted after the JDDH Total Amount is computed. Savings are based on Casa Total Payment minus JDDH Remaining Balance.`;refs.feeLabel.textContent = `Credit Card Term Fee (${pct(rule.feeRate)})`;refs.interestLabel.textContent = `JDDH Interest (${pct(rule.interestRate)})`;refs.jSrp.textContent = peso(srp);refs.jFee.textContent = peso(cardFee);refs.jLto.textContent = peso(lto);refs.jBase.textContent = peso(baseAmount, 2);refs.jInterest.textContent = peso(interestAmount, 2);refs.jTotal.textContent = peso(jddhTotal, 2);refs.jDp.textContent = `− ${peso(dp)}`;refs.jBalance.textContent = peso(balance, 2);refs.jMonthly.textContent = peso(Math.round(jddhMonthlyExact));refs.jCutoff.textContent = peso(Math.round(cutoffExact));refs.cSrp.textContent = peso(srp);refs.cInstallment.textContent = `${peso(casaMonthly)} × ${selectedTerm} = ${peso(casaInstallments)}`;refs.cDp.textContent = peso(dp);refs.cTotal.textContent = peso(casaTotal, 2);refs.cMonthly.textContent = peso(casaMonthly);refs.termText.textContent = `${selectedTerm} Months`;refs.savings.textContent = peso(Math.abs(savings), 2);refs.savings.classList.toggle('negative', savings < 0);refs.copyBtn.disabled = false;if (savings >= 0) {refs.savingsDetail.innerHTML = `Casa Total Payment of <strong>${peso(casaTotal, 2)}</strong> minus JDDH Remaining Balance of <strong>${peso(balance, 2)}</strong> = <strong>${peso(savings, 2)}</strong> estimated savings. Approximate monthly difference: <strong>${peso(Math.max(0, monthlySavings))}</strong>.`;} else {refs.savingsDetail.innerHTML = `Based on the current inputs, the JDDH Remaining Balance is higher by <strong>${peso(Math.abs(savings), 2)}</strong>. Please review the Casa quotation, Down Payment, and applicable rates.`;}return {model: modelText || 'Motorcycle',srp, dp, lto, cardFee, baseAmount, interestAmount, jddhTotal,balance, jddhMonthlyExact, cutoffExact, casaMonthly, casaInstallments,casaTotal, savings, monthlySavings, rule};}function setTerm(term){selectedTerm = term;termButtons.forEach(btn => btn.classList.toggle('active', Number(btn.dataset.term) === term));calculate();}function clearForm(){refs.model.value = '';refs.srp.value = '';refs.dp.value = '';refs.lto.value = '';refs.casa24.value = '';refs.casa36.value = '';setTerm(24);}termButtons.forEach(btn => {btn.addEventListener('click', () => setTerm(Number(btn.dataset.term)));});[refs.model, refs.srp, refs.dp, refs.lto, refs.casa24, refs.casa36].forEach(el => {el.addEventListener('input', calculate);});refs.resetBtn.addEventListener('click', clearForm);refs.copyBtn.addEventListener('click', async () => {const x = calculate();if (!x) return;const term = selectedTerm;const text = ['JDDH FLEXIPAY MOTORCYCLE LOAN QUOTATION',`${x.model}`,`Term: ${term} Months`,'','JDDH FLEXIPAY',`SRP: ${peso(x.srp)}`,`Credit Card Term Fee (${pct(x.rule.feeRate)}): ${peso(x.cardFee)}`,`LTO / Registration Fee: ${peso(x.lto)}`,`Base amount: ${peso(x.baseAmount, 2)}`,`JDDH Interest (${pct(x.rule.interestRate)}): ${peso(x.interestAmount, 2)}`,`JDDH Total Amount: ${peso(x.jddhTotal, 2)}`,`Down Payment: ${peso(x.dp)}`,`Remaining Balance: ${peso(x.balance, 2)}`,`Monthly Payment: ${peso(Math.round(x.jddhMonthlyExact))}`,`Per Cut-Off: ${peso(Math.round(x.cutoffExact))}`,'','MOTORCYCLE CASA QUOTATION',`Casa Monthly Payment: ${peso(x.casaMonthly)} × ${term}`,`Down Payment: ${peso(x.dp)}`,`Casa Total Payment: ${peso(x.casaTotal, 2)}`,'',`SAVINGS (CASA TOTAL - JDDH REMAINING BALANCE): ${x.savings >= 0 ? peso(x.savings, 2) : '-' + peso(Math.abs(x.savings), 2)}`,'','Final amounts remain subject to verification.'].join('\n');try {await navigator.clipboard.writeText(text);const original = refs.copyBtn.textContent;refs.copyBtn.textContent = 'Copied ✓';setTimeout(() => refs.copyBtn.textContent = original, 1600);} catch (err) {alert(text);}});setBlankState();</script></body></html>
+<!DOCTYPE html>
+<html lang="tl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0b1f3a" />
+  <title>JDDH Flexipay Motorcycle Loan Calculator</title>
+  <meta name="description" content="Compare JDDH Flexipay motorcycle installment computations with Casa financing for 24- and 36-month terms, then continue to the official JDDH motorcycle loan form." />
+  <style>
+    :root{--navy:#0b1f3a;--navy2:#15365f;--pink:#e91e63;--pinkdark:#bd1550;--paper:#f5f7fb;--panel:#fff;--ink:#172033;--muted:#6f7b8d;--line:#dfe5ee;--soft:#eef3f8;--green:#18794e;--greensoft:#e9f7ef;--yellow:#fff6bf;--yellowline:#f0d94a;--danger:#b42318}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;color:var(--ink);background:linear-gradient(180deg,#edf2f8 0,#f8fafc 34%,var(--paper) 100%);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;-webkit-font-smoothing:antialiased}button,input,a{font:inherit}.wrap{max-width:980px;margin:0 auto;padding:26px 18px 56px}.brandbar{height:6px;border-radius:999px;background:linear-gradient(90deg,var(--navy) 0 68%,var(--pink) 68% 100%);margin-bottom:24px}header{margin-bottom:20px}.kicker{margin:0 0 7px;color:var(--pinkdark);font-size:12px;font-weight:900;letter-spacing:.1em;text-transform:uppercase}h1{margin:0;color:var(--navy);font-size:32px;line-height:1.12;letter-spacing:-.03em}.sub{margin:10px 0 0;color:var(--muted);font-size:14px;line-height:1.55;max-width:790px}.card{background:var(--panel);border:1px solid var(--line);border-radius:16px;box-shadow:0 10px 30px rgba(11,31,58,.06);padding:20px}.input-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}.field{min-width:0}.field.full{grid-column:1/-1}label{display:block;margin-bottom:7px;color:var(--navy2);font-size:13px;font-weight:800}input{width:100%;padding:12px 13px;border:1px solid var(--line);border-radius:10px;background:#fff;color:var(--ink);font-size:16px}input:focus{outline:none;border-color:var(--pink);box-shadow:0 0 0 3px rgba(233,30,99,.10)}.hint{margin:6px 0 0;color:var(--muted);font-size:11.5px;line-height:1.4}.term-tabs{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:18px}.term-btn{border:1px solid var(--line);border-radius:12px;background:#fff;color:var(--navy);padding:13px 14px;font-weight:900;cursor:pointer;transition:.15s ease}.term-btn.active{background:var(--navy);border-color:var(--navy);color:#fff;box-shadow:0 8px 18px rgba(11,31,58,.14)}.formula-note{margin-top:14px;padding:12px 14px;border-radius:11px;background:var(--soft);color:#526071;font-size:12px;line-height:1.5}.formula-note strong{color:var(--navy)}.comparison{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:18px}.quote-card{background:#fff;border:1px solid var(--line);border-radius:15px;overflow:hidden}.quote-head{padding:15px 16px;background:var(--navy);color:#fff}.quote-card.casa .quote-head{background:#27384f}.quote-head .eyebrow{font-size:11px;letter-spacing:.08em;text-transform:uppercase;opacity:.72;font-weight:800}.quote-head h2{margin:4px 0 0;font-size:20px;line-height:1.2}.quote-body{padding:7px 16px 15px}.row{display:flex;justify-content:space-between;gap:16px;align-items:baseline;padding:9px 0;font-size:13.5px}.row+.row{border-top:1px solid #edf0f4}.row .lbl{color:#566273}.row .amt{text-align:right;font-weight:850;color:var(--ink);white-space:nowrap}.row.strong .lbl,.row.strong .amt{font-weight:900;color:var(--navy)}.row.total{margin:5px -8px 0;padding:11px 8px;border-radius:9px;background:var(--yellow);border:1px solid var(--yellowline)}.row.total .lbl,.row.total .amt{color:#4d4300;font-weight:900}.hero-pay{margin-top:10px;padding:14px 15px;border-radius:12px;background:var(--navy);color:#fff}.hero-pay .mini{font-size:11px;opacity:.72;font-weight:800;letter-spacing:.06em;text-transform:uppercase}.hero-pay .value{margin-top:4px;font-size:28px;font-weight:950;letter-spacing:-.03em}.hero-pay .cutoff{margin-top:7px;font-size:13px;color:rgba(255,255,255,.82)}.savings{margin-top:16px;padding:16px 18px;border-radius:15px;background:var(--greensoft);border:1px solid #b7e2c8;display:grid;grid-template-columns:1.2fr 1fr;gap:18px;align-items:center}.savings .label{color:var(--green);font-size:12px;font-weight:900;letter-spacing:.08em;text-transform:uppercase}.savings .big{margin-top:4px;color:var(--green);font-size:31px;font-weight:950;letter-spacing:-.03em}.savings .detail{color:#466454;font-size:13px;line-height:1.55}.negative{color:var(--danger)!important}.actions{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:16px}.action-btn{border:none;border-radius:10px;padding:13px 12px;font-weight:900;cursor:pointer}.copy-btn{background:var(--pink);color:#fff}.reset-btn{background:var(--soft);color:var(--navy)}.copy-btn:active,.reset-btn:active{transform:translateY(1px)}.action-btn:disabled{opacity:.45;cursor:not-allowed;transform:none}.apply-wrap{margin-top:12px}.apply-btn{display:flex;align-items:center;justify-content:center;min-height:56px;width:100%;padding:14px 18px;border-radius:12px;text-decoration:none;text-align:center;background:linear-gradient(135deg,var(--pink),var(--pinkdark));color:#fff;font-weight:950;box-shadow:0 10px 24px rgba(233,30,99,.20);transition:.15s ease}.apply-btn.ready:hover{transform:translateY(-1px);box-shadow:0 13px 28px rgba(233,30,99,.24)}.apply-btn[aria-disabled="true"]{background:#c7ced8;color:#657181;box-shadow:none;cursor:not-allowed;pointer-events:none}.apply-note{margin:8px 3px 0;color:var(--muted);font-size:11.5px;line-height:1.45;text-align:center}.disclaimer{margin:14px 0 0;color:var(--muted);font-size:11.5px;line-height:1.5}footer{margin-top:22px;text-align:center;color:var(--muted);font-size:11.5px;line-height:1.5}
+    @media(max-width:760px){.input-grid{grid-template-columns:1fr 1fr}.comparison{grid-template-columns:1fr}.savings{grid-template-columns:1fr;gap:8px}}
+    @media(max-width:480px){.wrap{padding:20px 14px 44px}h1{font-size:27px}.card{padding:16px}.input-grid{grid-template-columns:1fr}.field.full{grid-column:auto}.actions{grid-template-columns:1fr}.row{font-size:13px}.hero-pay .value{font-size:26px}.savings .big{font-size:28px}}
+  </style>
+</head>
+<body>
+<main class="wrap">
+  <div class="brandbar"></div>
+  <header>
+    <p class="kicker">JDDH Flexipay Motorcycle Loan</p>
+    <h1>Motorcycle Loan Calculator</h1>
+    <p class="sub">Compare JDDH Flexipay with Casa Financing. Select a 24- or 36-month term, review the complete payment breakdown, then continue to the official Motorcycle Loan Agreement form with the selected computation transferred automatically.</p>
+  </header>
+
+  <section class="card" aria-label="Motorcycle loan comparison calculator">
+    <div class="input-grid">
+      <div class="field full"><label for="model">Motorcycle Model</label><input id="model" type="text" autocomplete="off" /></div>
+      <div class="field"><label for="srp">Suggested Retail Price (SRP)</label><input id="srp" type="number" min="1" step="1" inputmode="decimal" /></div>
+      <div class="field"><label for="dp">Down Payment (₱)</label><input id="dp" type="number" min="0" step="1" inputmode="decimal" /></div>
+      <div class="field"><label for="lto">LTO / Registration Fee (₱)</label><input id="lto" type="number" min="0" step="1" inputmode="decimal" /></div>
+      <div class="field"><label for="casa24">Casa Monthly Payment — 24 Months (₱)</label><input id="casa24" type="number" min="0" step="1" inputmode="decimal" /><p class="hint">Enter the Casa monthly quotation for 24 months.</p></div>
+      <div class="field"><label for="casa36">Casa Monthly Payment — 36 Months (₱)</label><input id="casa36" type="number" min="0" step="1" inputmode="decimal" /><p class="hint">Enter the Casa monthly quotation for 36 months.</p></div>
+    </div>
+
+    <div class="term-tabs" aria-label="Payment term">
+      <button class="term-btn active" type="button" data-term="24">24 Months</button>
+      <button class="term-btn" type="button" data-term="36">36 Months</button>
+    </div>
+
+    <div class="formula-note" id="formulaNote"></div>
+
+    <div class="comparison">
+      <article class="quote-card jddh">
+        <div class="quote-head"><div class="eyebrow">JDDH OFFER</div><h2>JDDH Flexipay</h2></div>
+        <div class="quote-body">
+          <div class="row"><span class="lbl">SRP</span><span class="amt" id="jSrp">—</span></div>
+          <div class="row"><span class="lbl" id="feeLabel">Credit Card Term Fee</span><span class="amt" id="jFee">—</span></div>
+          <div class="row"><span class="lbl">LTO / Registration Fee</span><span class="amt" id="jLto">—</span></div>
+          <div class="row strong"><span class="lbl">Base Amount</span><span class="amt" id="jBase">—</span></div>
+          <div class="row"><span class="lbl" id="interestLabel">JDDH Interest</span><span class="amt" id="jInterest">—</span></div>
+          <div class="row total"><span class="lbl">JDDH Total Amount</span><span class="amt" id="jTotal">—</span></div>
+          <div class="row"><span class="lbl">Less: Down Payment</span><span class="amt" id="jDp">—</span></div>
+          <div class="row strong"><span class="lbl">Remaining Balance</span><span class="amt" id="jBalance">—</span></div>
+          <div class="hero-pay"><div class="mini">Monthly Payment</div><div class="value" id="jMonthly">—</div><div class="cutoff">Per Cut-Off: <strong id="jCutoff">—</strong></div></div>
+        </div>
+      </article>
+
+      <article class="quote-card casa">
+        <div class="quote-head"><div class="eyebrow">CASA QUOTATION</div><h2>Motorcycle Casa</h2></div>
+        <div class="quote-body">
+          <div class="row"><span class="lbl">SRP</span><span class="amt" id="cSrp">—</span></div>
+          <div class="row"><span class="lbl">Monthly Payment × Term</span><span class="amt" id="cInstallment">—</span></div>
+          <div class="row"><span class="lbl">Down Payment</span><span class="amt" id="cDp">—</span></div>
+          <div class="row total"><span class="lbl">Casa Total Payment</span><span class="amt" id="cTotal">—</span></div>
+          <div class="hero-pay"><div class="mini">Casa Monthly Payment</div><div class="value" id="cMonthly">—</div><div class="cutoff"><span id="termText">24 Months</span> Financing Quotation</div></div>
+        </div>
+      </article>
+    </div>
+
+    <section class="savings" aria-live="polite">
+      <div><div class="label">ESTIMATED SAVINGS WITH JDDH FLEXIPAY</div><div class="big" id="savings">—</div></div>
+      <div class="detail" id="savingsDetail">Enter the motorcycle and financing details to generate the computation.</div>
+    </section>
+
+    <div class="actions">
+      <button type="button" id="copyBtn" class="action-btn copy-btn" disabled>Copy Quotation</button>
+      <button type="button" id="resetBtn" class="action-btn reset-btn">Clear Form</button>
+    </div>
+
+    <div class="apply-wrap">
+      <a id="applyBtn" class="apply-btn" href="#" aria-disabled="true">Proceed to Motorcycle Loan Form →</a>
+      <p class="apply-note" id="applyNote">Complete the required calculator details first. The selected 24- or 36-month computation will be transferred to the official Tally agreement.</p>
+    </div>
+
+    <p class="disclaimer">This calculator is intended for quotation purposes only. Savings are calculated as Casa Total Payment minus JDDH Remaining Balance, following the approved JDDH Flexipay computation. Final amounts remain subject to JDDH verification and written account confirmation.</p>
+  </section>
+
+  <footer>JDDH Travel and Business Services · Flexipay Motorcycle Loan</footer>
+</main>
+
+<script>
+const TALLY_FORM_URL = 'https://tally.so/r/2Ep9LV';
+const refs = {
+  model: document.getElementById('model'), srp: document.getElementById('srp'), dp: document.getElementById('dp'), lto: document.getElementById('lto'),
+  casa24: document.getElementById('casa24'), casa36: document.getElementById('casa36'), formulaNote: document.getElementById('formulaNote'),
+  feeLabel: document.getElementById('feeLabel'), interestLabel: document.getElementById('interestLabel'), jSrp: document.getElementById('jSrp'),
+  jFee: document.getElementById('jFee'), jLto: document.getElementById('jLto'), jBase: document.getElementById('jBase'), jInterest: document.getElementById('jInterest'),
+  jTotal: document.getElementById('jTotal'), jDp: document.getElementById('jDp'), jBalance: document.getElementById('jBalance'), jMonthly: document.getElementById('jMonthly'),
+  jCutoff: document.getElementById('jCutoff'), cSrp: document.getElementById('cSrp'), cInstallment: document.getElementById('cInstallment'), cDp: document.getElementById('cDp'),
+  cTotal: document.getElementById('cTotal'), cMonthly: document.getElementById('cMonthly'), termText: document.getElementById('termText'), savings: document.getElementById('savings'),
+  savingsDetail: document.getElementById('savingsDetail'), copyBtn: document.getElementById('copyBtn'), resetBtn: document.getElementById('resetBtn'),
+  applyBtn: document.getElementById('applyBtn'), applyNote: document.getElementById('applyNote')
+};
+const termButtons = [...document.querySelectorAll('.term-btn')];
+const termRules = {24:{feeRate:0.06,interestRate:0.35},36:{feeRate:0.10,interestRate:0.50}};
+let selectedTerm = 24;
+
+function raw(el){return el.value.trim()}
+function n(el){const t=raw(el);if(t==='')return null;const v=Number(t);return Number.isFinite(v)&&v>=0?v:null}
+function peso(v,d=0){return new Intl.NumberFormat('en-PH',{style:'currency',currency:'PHP',minimumFractionDigits:d,maximumFractionDigits:d}).format(Number.isFinite(v)?v:0)}
+function pct(v){return `${Math.round(v*100)}%`}
+function amountParam(v){return Number(v).toFixed(2)}
+
+function disableApply(message){
+  refs.applyBtn.href='#';
+  refs.applyBtn.setAttribute('aria-disabled','true');
+  refs.applyBtn.classList.remove('ready');
+  refs.applyNote.textContent=message||'Complete the required calculator details first. The selected 24- or 36-month computation will be transferred to the official Tally agreement.';
+}
+
+function buildTallyUrl(x){
+  const params=new URLSearchParams({
+    motorcycle_model:x.model,
+    srp:amountParam(x.srp),
+    downpayment:amountParam(x.dp),
+    lto_fee:amountParam(x.lto),
+    term_months:String(selectedTerm),
+    cc_fee_rate:pct(x.rule.feeRate),
+    cc_term_fee:amountParam(x.cardFee),
+    base_amount:amountParam(x.baseAmount),
+    jddh_interest_rate:pct(x.rule.interestRate),
+    jddh_interest_amount:amountParam(x.interestAmount),
+    jddh_total:amountParam(x.jddhTotal),
+    remaining_balance:amountParam(x.balance),
+    monthly_payment:amountParam(Math.round(x.jddhMonthlyExact)),
+    per_cutoff:amountParam(x.cutoffExact),
+    casa_monthly:amountParam(x.casaMonthly),
+    casa_total:amountParam(x.casaTotal),
+    estimated_savings:amountParam(x.savings),
+    source:'motorcycle_calculator'
+  });
+  return `${TALLY_FORM_URL}?${params.toString()}`;
+}
+
+function setBlankState(){
+  const rule=termRules[selectedTerm];
+  refs.formulaNote.innerHTML=`<strong>${selectedTerm}-Month Plan:</strong> ${pct(rule.feeRate)} Credit Card Term Fee + LTO / Registration Fee, followed by ${pct(rule.interestRate)} JDDH Interest. Savings are based on Casa Total Payment minus JDDH Remaining Balance.`;
+  refs.feeLabel.textContent=`Credit Card Term Fee (${pct(rule.feeRate)})`;
+  refs.interestLabel.textContent=`JDDH Interest (${pct(rule.interestRate)})`;
+  [refs.jSrp,refs.jFee,refs.jLto,refs.jBase,refs.jInterest,refs.jTotal,refs.jDp,refs.jBalance,refs.jMonthly,refs.jCutoff,refs.cSrp,refs.cInstallment,refs.cDp,refs.cTotal,refs.cMonthly].forEach(el=>el.textContent='—');
+  refs.termText.textContent=`${selectedTerm} Months`;
+  refs.savings.textContent='—';
+  refs.savings.classList.remove('negative');
+  refs.savingsDetail.textContent='Enter the motorcycle and financing details to generate the computation.';
+  refs.copyBtn.disabled=true;
+  disableApply();
+}
+
+function calculate(){
+  const modelText=raw(refs.model), srpValue=n(refs.srp), dpValue=n(refs.dp), ltoValue=n(refs.lto), casa24Value=n(refs.casa24), casa36Value=n(refs.casa36);
+  const hasInput=modelText!==''||[srpValue,dpValue,ltoValue,casa24Value,casa36Value].some(v=>v!==null);
+  if(!hasInput){setBlankState();return null}
+
+  const srp=srpValue??0, dp=dpValue??0, lto=ltoValue??0, rule=termRules[selectedTerm];
+  const selectedCasaValue=selectedTerm===24?casa24Value:casa36Value;
+  const casaMonthly=selectedCasaValue??0;
+  const cardFee=srp*rule.feeRate;
+  const baseAmount=srp+cardFee+lto;
+  const interestAmount=baseAmount*rule.interestRate;
+  const jddhTotal=baseAmount+interestAmount;
+  const balance=Math.max(0,jddhTotal-dp);
+  const jddhMonthlyExact=balance/selectedTerm;
+  const cutoffExact=balance/(selectedTerm*2);
+  const casaInstallments=casaMonthly*selectedTerm;
+  const casaTotal=casaInstallments+dp;
+  const savings=casaTotal-balance;
+  const monthlySavings=casaMonthly-jddhMonthlyExact;
+
+  refs.formulaNote.innerHTML=`<strong>${selectedTerm}-Month Plan:</strong> ${pct(rule.feeRate)} Credit Card Term Fee + LTO / Registration Fee, followed by ${pct(rule.interestRate)} JDDH Interest. The Down Payment is deducted after the JDDH Total Amount is computed. Savings are based on Casa Total Payment minus JDDH Remaining Balance.`;
+  refs.feeLabel.textContent=`Credit Card Term Fee (${pct(rule.feeRate)})`;
+  refs.interestLabel.textContent=`JDDH Interest (${pct(rule.interestRate)})`;
+  refs.jSrp.textContent=peso(srp); refs.jFee.textContent=peso(cardFee); refs.jLto.textContent=peso(lto); refs.jBase.textContent=peso(baseAmount,2);
+  refs.jInterest.textContent=peso(interestAmount,2); refs.jTotal.textContent=peso(jddhTotal,2); refs.jDp.textContent=`− ${peso(dp)}`; refs.jBalance.textContent=peso(balance,2);
+  refs.jMonthly.textContent=peso(Math.round(jddhMonthlyExact)); refs.jCutoff.textContent=peso(cutoffExact,2);
+  refs.cSrp.textContent=peso(srp); refs.cInstallment.textContent=`${peso(casaMonthly)} × ${selectedTerm} = ${peso(casaInstallments)}`; refs.cDp.textContent=peso(dp);
+  refs.cTotal.textContent=peso(casaTotal,2); refs.cMonthly.textContent=peso(casaMonthly); refs.termText.textContent=`${selectedTerm} Months`;
+  refs.savings.textContent=peso(Math.abs(savings),2); refs.savings.classList.toggle('negative',savings<0);
+  if(savings>=0){refs.savingsDetail.innerHTML=`Casa Total Payment of <strong>${peso(casaTotal,2)}</strong> minus JDDH Remaining Balance of <strong>${peso(balance,2)}</strong> = <strong>${peso(savings,2)}</strong> estimated savings. Approximate monthly difference: <strong>${peso(Math.max(0,monthlySavings))}</strong>.`}
+  else{refs.savingsDetail.innerHTML=`Based on the current inputs, the JDDH Remaining Balance is higher by <strong>${peso(Math.abs(savings),2)}</strong>. Please review the Casa quotation, Down Payment, and applicable rates.`}
+
+  const x={model:modelText,srp,dp,lto,cardFee,baseAmount,interestAmount,jddhTotal,balance,jddhMonthlyExact,cutoffExact,casaMonthly,casaInstallments,casaTotal,savings,monthlySavings,rule};
+  const valid=modelText!==''&&srpValue!==null&&srpValue>0&&dpValue!==null&&ltoValue!==null&&selectedCasaValue!==null&&selectedCasaValue>0;
+  refs.copyBtn.disabled=!valid;
+  if(valid){
+    refs.applyBtn.href=buildTallyUrl(x);
+    refs.applyBtn.setAttribute('aria-disabled','false');
+    refs.applyBtn.classList.add('ready');
+    refs.applyNote.textContent=`Ready: the ${selectedTerm}-month motorcycle computation will appear automatically in the official JDDH Tally agreement.`;
+  }else{
+    disableApply(`Complete Motorcycle Model, SRP, Down Payment, LTO, and the Casa ${selectedTerm}-month quotation to continue.`);
+  }
+  return valid?x:null;
+}
+
+function setTerm(term){selectedTerm=term;termButtons.forEach(btn=>btn.classList.toggle('active',Number(btn.dataset.term)===term));calculate()}
+function clearForm(){refs.model.value='';refs.srp.value='';refs.dp.value='';refs.lto.value='';refs.casa24.value='';refs.casa36.value='';setTerm(24)}
+
+termButtons.forEach(btn=>btn.addEventListener('click',()=>setTerm(Number(btn.dataset.term))));
+[refs.model,refs.srp,refs.dp,refs.lto,refs.casa24,refs.casa36].forEach(el=>el.addEventListener('input',calculate));
+refs.resetBtn.addEventListener('click',clearForm);
+refs.applyBtn.addEventListener('click',e=>{if(refs.applyBtn.getAttribute('aria-disabled')==='true')e.preventDefault()});
+refs.copyBtn.addEventListener('click',async()=>{
+  const x=calculate(); if(!x)return;
+  const term=selectedTerm;
+  const text=[
+    'JDDH FLEXIPAY MOTORCYCLE LOAN QUOTATION',x.model,`Term: ${term} Months`,'',
+    'JDDH FLEXIPAY',`SRP: ${peso(x.srp)}`,`Credit Card Term Fee (${pct(x.rule.feeRate)}): ${peso(x.cardFee)}`,`LTO / Registration Fee: ${peso(x.lto)}`,
+    `Base Amount: ${peso(x.baseAmount,2)}`,`JDDH Interest (${pct(x.rule.interestRate)}): ${peso(x.interestAmount,2)}`,`JDDH Total Amount: ${peso(x.jddhTotal,2)}`,
+    `Down Payment: ${peso(x.dp)}`,`Remaining Balance: ${peso(x.balance,2)}`,`Monthly Payment: ${peso(Math.round(x.jddhMonthlyExact))}`,`Per Cut-Off: ${peso(x.cutoffExact,2)}`,'',
+    'MOTORCYCLE CASA QUOTATION',`Casa Monthly Payment: ${peso(x.casaMonthly)} × ${term}`,`Down Payment: ${peso(x.dp)}`,`Casa Total Payment: ${peso(x.casaTotal,2)}`,'',
+    `SAVINGS (CASA TOTAL - JDDH REMAINING BALANCE): ${x.savings>=0?peso(x.savings,2):'-'+peso(Math.abs(x.savings),2)}`,'','Final amounts remain subject to verification.'
+  ].join('\n');
+  try{await navigator.clipboard.writeText(text);const original=refs.copyBtn.textContent;refs.copyBtn.textContent='Copied ✓';setTimeout(()=>refs.copyBtn.textContent=original,1600)}
+  catch(err){alert(text)}
+});
+setBlankState();
+</script>
+</body>
+</html>
