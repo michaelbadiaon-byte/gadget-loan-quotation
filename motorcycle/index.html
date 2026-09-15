@@ -89,21 +89,21 @@
 </main>
 
 <script>
-const TALLY_FORM_URL = 'https://tally.so/r/2Ep9LV';
-const refs = {
-  model: document.getElementById('model'), srp: document.getElementById('srp'), dp: document.getElementById('dp'), lto: document.getElementById('lto'),
-  casa24: document.getElementById('casa24'), casa36: document.getElementById('casa36'), formulaNote: document.getElementById('formulaNote'),
-  feeLabel: document.getElementById('feeLabel'), interestLabel: document.getElementById('interestLabel'), jSrp: document.getElementById('jSrp'),
-  jFee: document.getElementById('jFee'), jLto: document.getElementById('jLto'), jBase: document.getElementById('jBase'), jInterest: document.getElementById('jInterest'),
-  jTotal: document.getElementById('jTotal'), jDp: document.getElementById('jDp'), jBalance: document.getElementById('jBalance'), jMonthly: document.getElementById('jMonthly'),
-  jCutoff: document.getElementById('jCutoff'), cSrp: document.getElementById('cSrp'), cInstallment: document.getElementById('cInstallment'), cDp: document.getElementById('cDp'),
-  cTotal: document.getElementById('cTotal'), cMonthly: document.getElementById('cMonthly'), termText: document.getElementById('termText'), savings: document.getElementById('savings'),
-  savingsDetail: document.getElementById('savingsDetail'), copyBtn: document.getElementById('copyBtn'), resetBtn: document.getElementById('resetBtn'),
-  applyBtn: document.getElementById('applyBtn'), applyNote: document.getElementById('applyNote')
+const TALLY_FORM_URL='https://tally.so/r/2Ep9LV';
+const refs={
+  model:document.getElementById('model'),srp:document.getElementById('srp'),dp:document.getElementById('dp'),lto:document.getElementById('lto'),
+  casa24:document.getElementById('casa24'),casa36:document.getElementById('casa36'),formulaNote:document.getElementById('formulaNote'),
+  feeLabel:document.getElementById('feeLabel'),interestLabel:document.getElementById('interestLabel'),jSrp:document.getElementById('jSrp'),
+  jFee:document.getElementById('jFee'),jLto:document.getElementById('jLto'),jBase:document.getElementById('jBase'),jInterest:document.getElementById('jInterest'),
+  jTotal:document.getElementById('jTotal'),jDp:document.getElementById('jDp'),jBalance:document.getElementById('jBalance'),jMonthly:document.getElementById('jMonthly'),
+  jCutoff:document.getElementById('jCutoff'),cSrp:document.getElementById('cSrp'),cInstallment:document.getElementById('cInstallment'),cDp:document.getElementById('cDp'),
+  cTotal:document.getElementById('cTotal'),cMonthly:document.getElementById('cMonthly'),termText:document.getElementById('termText'),savings:document.getElementById('savings'),
+  savingsDetail:document.getElementById('savingsDetail'),copyBtn:document.getElementById('copyBtn'),resetBtn:document.getElementById('resetBtn'),
+  applyBtn:document.getElementById('applyBtn'),applyNote:document.getElementById('applyNote')
 };
-const termButtons = [...document.querySelectorAll('.term-btn')];
-const termRules = {24:{feeRate:0.06,interestRate:0.35},36:{feeRate:0.10,interestRate:0.50}};
-let selectedTerm = 24;
+const termButtons=[...document.querySelectorAll('.term-btn')];
+const termRules={24:{feeRate:.06,interestRate:.35},36:{feeRate:.10,interestRate:.50}};
+let selectedTerm=24;
 
 function raw(el){return el.value.trim()}
 function n(el){const t=raw(el);if(t==='')return null;const v=Number(t);return Number.isFinite(v)&&v>=0?v:null}
@@ -124,7 +124,7 @@ function buildTallyUrl(x){
     srp:amountParam(x.srp),
     downpayment:amountParam(x.dp),
     lto_fee:amountParam(x.lto),
-    term_months:String(selectedTerm),
+    term_months:`${selectedTerm} Months`,
     cc_fee_rate:pct(x.rule.feeRate),
     cc_term_fee:amountParam(x.cardFee),
     base_amount:amountParam(x.baseAmount),
@@ -157,11 +157,11 @@ function setBlankState(){
 }
 
 function calculate(){
-  const modelText=raw(refs.model), srpValue=n(refs.srp), dpValue=n(refs.dp), ltoValue=n(refs.lto), casa24Value=n(refs.casa24), casa36Value=n(refs.casa36);
+  const modelText=raw(refs.model),srpValue=n(refs.srp),dpValue=n(refs.dp),ltoValue=n(refs.lto),casa24Value=n(refs.casa24),casa36Value=n(refs.casa36);
   const hasInput=modelText!==''||[srpValue,dpValue,ltoValue,casa24Value,casa36Value].some(v=>v!==null);
   if(!hasInput){setBlankState();return null}
 
-  const srp=srpValue??0, dp=dpValue??0, lto=ltoValue??0, rule=termRules[selectedTerm];
+  const srp=srpValue??0,dp=dpValue??0,lto=ltoValue??0,rule=termRules[selectedTerm];
   const selectedCasaValue=selectedTerm===24?casa24Value:casa36Value;
   const casaMonthly=selectedCasaValue??0;
   const cardFee=srp*rule.feeRate;
@@ -179,23 +179,25 @@ function calculate(){
   refs.formulaNote.innerHTML=`<strong>${selectedTerm}-Month Plan:</strong> ${pct(rule.feeRate)} Credit Card Term Fee + LTO / Registration Fee, followed by ${pct(rule.interestRate)} JDDH Interest. The Down Payment is deducted after the JDDH Total Amount is computed. Savings are based on Casa Total Payment minus JDDH Remaining Balance.`;
   refs.feeLabel.textContent=`Credit Card Term Fee (${pct(rule.feeRate)})`;
   refs.interestLabel.textContent=`JDDH Interest (${pct(rule.interestRate)})`;
-  refs.jSrp.textContent=peso(srp); refs.jFee.textContent=peso(cardFee); refs.jLto.textContent=peso(lto); refs.jBase.textContent=peso(baseAmount,2);
-  refs.jInterest.textContent=peso(interestAmount,2); refs.jTotal.textContent=peso(jddhTotal,2); refs.jDp.textContent=`− ${peso(dp)}`; refs.jBalance.textContent=peso(balance,2);
-  refs.jMonthly.textContent=peso(Math.round(jddhMonthlyExact)); refs.jCutoff.textContent=peso(cutoffExact,2);
-  refs.cSrp.textContent=peso(srp); refs.cInstallment.textContent=`${peso(casaMonthly)} × ${selectedTerm} = ${peso(casaInstallments)}`; refs.cDp.textContent=peso(dp);
-  refs.cTotal.textContent=peso(casaTotal,2); refs.cMonthly.textContent=peso(casaMonthly); refs.termText.textContent=`${selectedTerm} Months`;
-  refs.savings.textContent=peso(Math.abs(savings),2); refs.savings.classList.toggle('negative',savings<0);
+  refs.jSrp.textContent=peso(srp);refs.jFee.textContent=peso(cardFee);refs.jLto.textContent=peso(lto);refs.jBase.textContent=peso(baseAmount,2);
+  refs.jInterest.textContent=peso(interestAmount,2);refs.jTotal.textContent=peso(jddhTotal,2);refs.jDp.textContent=`− ${peso(dp)}`;refs.jBalance.textContent=peso(balance,2);
+  refs.jMonthly.textContent=peso(Math.round(jddhMonthlyExact));refs.jCutoff.textContent=peso(cutoffExact,2);
+  refs.cSrp.textContent=peso(srp);refs.cInstallment.textContent=`${peso(casaMonthly)} × ${selectedTerm} = ${peso(casaInstallments)}`;refs.cDp.textContent=peso(dp);
+  refs.cTotal.textContent=peso(casaTotal,2);refs.cMonthly.textContent=peso(casaMonthly);refs.termText.textContent=`${selectedTerm} Months`;
+  refs.savings.textContent=peso(Math.abs(savings),2);refs.savings.classList.toggle('negative',savings<0);
+
   if(savings>=0){refs.savingsDetail.innerHTML=`Casa Total Payment of <strong>${peso(casaTotal,2)}</strong> minus JDDH Remaining Balance of <strong>${peso(balance,2)}</strong> = <strong>${peso(savings,2)}</strong> estimated savings. Approximate monthly difference: <strong>${peso(Math.max(0,monthlySavings))}</strong>.`}
   else{refs.savingsDetail.innerHTML=`Based on the current inputs, the JDDH Remaining Balance is higher by <strong>${peso(Math.abs(savings),2)}</strong>. Please review the Casa quotation, Down Payment, and applicable rates.`}
 
   const x={model:modelText,srp,dp,lto,cardFee,baseAmount,interestAmount,jddhTotal,balance,jddhMonthlyExact,cutoffExact,casaMonthly,casaInstallments,casaTotal,savings,monthlySavings,rule};
   const valid=modelText!==''&&srpValue!==null&&srpValue>0&&dpValue!==null&&ltoValue!==null&&selectedCasaValue!==null&&selectedCasaValue>0;
   refs.copyBtn.disabled=!valid;
+
   if(valid){
     refs.applyBtn.href=buildTallyUrl(x);
     refs.applyBtn.setAttribute('aria-disabled','false');
     refs.applyBtn.classList.add('ready');
-    refs.applyNote.textContent=`Ready: the ${selectedTerm}-month motorcycle computation will appear automatically in the official JDDH Tally agreement.`;
+    refs.applyNote.textContent=`Ready: the ${selectedTerm}-month computation and key payment fields will be pre-filled in the official JDDH Tally agreement.`;
   }else{
     disableApply(`Complete Motorcycle Model, SRP, Down Payment, LTO, and the Casa ${selectedTerm}-month quotation to continue.`);
   }
@@ -210,7 +212,7 @@ termButtons.forEach(btn=>btn.addEventListener('click',()=>setTerm(Number(btn.dat
 refs.resetBtn.addEventListener('click',clearForm);
 refs.applyBtn.addEventListener('click',e=>{if(refs.applyBtn.getAttribute('aria-disabled')==='true')e.preventDefault()});
 refs.copyBtn.addEventListener('click',async()=>{
-  const x=calculate(); if(!x)return;
+  const x=calculate();if(!x)return;
   const term=selectedTerm;
   const text=[
     'JDDH FLEXIPAY MOTORCYCLE LOAN QUOTATION',x.model,`Term: ${term} Months`,'',
